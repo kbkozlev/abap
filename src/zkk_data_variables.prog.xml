@@ -15,6 +15,24 @@
      <ENTRY>Report ZKK_DATA_VARIABLES</ENTRY>
      <LENGTH>25</LENGTH>
     </item>
+    <item>
+     <ID>S</ID>
+     <KEY>LP_ADDRS</KEY>
+     <ENTRY>Address</ENTRY>
+     <LENGTH>15</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>LP_PIN</KEY>
+     <ENTRY>Pin Code</ENTRY>
+     <LENGTH>16</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>LP_S_NAM</KEY>
+     <ENTRY>Shop Name</ENTRY>
+     <LENGTH>17</LENGTH>
+    </item>
    </TPOOL>
   </asx:values>
  </asx:abap>

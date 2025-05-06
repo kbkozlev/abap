@@ -34,37 +34,37 @@ REPORT zkk_data_variables NO STANDARD PAGE HEADING.
 *Multiplication = <multiply all three>
 *Some calculation = <divide value1 by value2 and then add value3 to the division result>
 
-*PARAMETERS: lp_int1 TYPE i OBLIGATORY,
-*            lp_int2 TYPE i OBLIGATORY,
-*            lp_int3 TYPE i OBLIGATORY.
-*
-*DATA: lv_answer TYPE p DECIMALS 2.
-*
-*WRITE: |Parameter 1: { lp_int1 } |,
-*     / |Parameter 2: { lp_int2 } |,
-*     / |Parameter 3: { lp_int3 } |.
-*
-*SKIP 1.
-*
-*lv_answer = lp_int1 + lp_int2 + lp_int3.
-*
-*WRITE: |Sum: { lv_answer } |.
-*
-*lv_answer = lv_answer - ( lp_int1 + lp_int2 ).
-*
-*WRITE: / |1st Subtraction (Total - (param 1 + param 2)): { lv_answer } |.
-*
-*lv_answer = lv_answer - lp_int3.
-*
-*WRITE: / |2nd Subtraction (Total - param 3): { lv_answer } |.
-*
-*lv_answer = lp_int1 * lp_int2 * lp_int3.
-*
-*WRITE: / |Multiplication: { lv_answer } |.
-*
-*lv_answer = ( lp_int1 / lp_int2 ) + lp_int3.
-*
-*WRITE: / |Some Calculation ((param 1 / param 2) + param 3): { lv_answer } |.
+PARAMETERS: lp_int1 TYPE i OBLIGATORY,
+            lp_int2 TYPE i OBLIGATORY,
+            lp_int3 TYPE i OBLIGATORY.
+
+DATA: lv_answer TYPE p DECIMALS 2.
+
+WRITE: |Parameter 1: { lp_int1 } |,
+     / |Parameter 2: { lp_int2 } |,
+     / |Parameter 3: { lp_int3 } |.
+
+SKIP 1.
+
+lv_answer = lp_int1 + lp_int2 + lp_int3.
+
+WRITE: |Sum: { lv_answer } |.
+
+lv_answer = lv_answer - ( lp_int1 + lp_int2 ).
+
+WRITE: / |1st Subtraction (Total - (param 1 + param 2)): { lv_answer } |.
+
+lv_answer = lv_answer - lp_int3.
+
+WRITE: / |2nd Subtraction (Total - param 3): { lv_answer } |.
+
+lv_answer = lp_int1 * lp_int2 * lp_int3.
+
+WRITE: / |Multiplication: { lv_answer } |.
+
+lv_answer = ( lp_int1 / lp_int2 ) + lp_int3.
+
+WRITE: / |Some Calculation ((param 1 / param 2) + param 3): { lv_answer } |.
 
 *5. Create a program as per the below requirement:
 *Selscreen:
@@ -77,19 +77,13 @@ REPORT zkk_data_variables NO STANDARD PAGE HEADING.
 *Shop Address: <data from selscreen>
 *Pin Code: <data from selscreen>
 
-PARAMETERS: lp_s_nam TYPE c LENGTH 40 LOWER CASE OBLIGATORY,
-            lp_addrs TYPE c LENGTH 80 LOWER CASE,
-            lp_pin   TYPE n LENGTH 6 OBLIGATORY DEFAULT 500001.
+*PARAMETERS: lp_s_nam TYPE c LENGTH 40 LOWER CASE OBLIGATORY,
+*            lp_addrs TYPE c LENGTH 80 LOWER CASE,
+*            lp_pin   TYPE n LENGTH 6 OBLIGATORY DEFAULT 500001.
+*
+*
+*WRITE: |Shop Details:| color 3,
+*     / |Shop Name: { lp_s_nam } |,
+*     / |Address: { lp_addrs } |,
+*     / |Pin Code: { lp_pin } |.
 
-
-WRITE: |Shop Details:| color 3,
-     / |Shop Name: { lp_s_nam } |,
-     / |Address: { lp_addrs } |,
-     / |Pin Code: { lp_pin } |.
-
-
-*Selection texts
-*----------------------------------------------------------
-* LP_ADDRS         Address
-* LP_PIN         Pin Code
-* LP_S_NAM         Shop Name

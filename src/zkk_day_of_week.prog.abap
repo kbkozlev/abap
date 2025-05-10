@@ -45,7 +45,24 @@ ELSEIF lp_day = 6.
   lv_day = 'Friday'.
 ELSEIF lp_day = 7.
   lv_day = 'Saturday'.
+ELSE.
+  lv_day = 'Invalid day'.
 ENDIF.
+
+CASE lp_day.
+
+  WHEN 1.
+    lv_day = 'Sunday'.
+  WHEN 2.
+    lv_day = 'Monday'.
+  WHEN 3.
+    lv_day = 'Tuesday'.
+  WHEN 4.
+    lv_day = 'Wednesday'.
+  WHEN OTHERS.
+    lv_day = 'Invalid'.
+ENDCASE.
+
 
 WRITE: | { lv_day } |.
 

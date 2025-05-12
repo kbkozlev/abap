@@ -25,7 +25,8 @@ INITIALIZATION.
   text2 = 'Female'.
   text3 = 'Transgender'.
 
-  DATA: gv_gen TYPE string.
+* Why does it not work from here?
+DATA: gv_gen TYPE string.
 
   CASE abap_true.
     WHEN p_m.

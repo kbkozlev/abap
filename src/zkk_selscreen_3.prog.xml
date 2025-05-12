@@ -10,6 +10,37 @@
     <LDBNAME>D$S</LDBNAME>
     <UCCHECK>X</UCCHECK>
    </PROGDIR>
+   <TPOOL>
+    <item>
+     <ID>I</ID>
+     <KEY>001</KEY>
+     <ENTRY>Gender Selection</ENTRY>
+     <LENGTH>26</LENGTH>
+    </item>
+    <item>
+     <ID>R</ID>
+     <ENTRY>Assign: 10.05 &quot;Selection screen 3&quot;</ENTRY>
+     <LENGTH>34</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>P_F</KEY>
+     <ENTRY>Female</ENTRY>
+     <LENGTH>14</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>P_M</KEY>
+     <ENTRY>Male</ENTRY>
+     <LENGTH>12</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>P_T</KEY>
+     <ENTRY>Trans</ENTRY>
+     <LENGTH>13</LENGTH>
+    </item>
+   </TPOOL>
   </asx:values>
  </asx:abap>
 </abapGit>

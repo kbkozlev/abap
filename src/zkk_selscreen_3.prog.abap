@@ -51,9 +51,9 @@ APPEND gs_student TO gt_student.
 CLEAR gs_student.
 
 SELECTION-SCREEN BEGIN OF BLOCK b1 WITH FRAME TITLE TEXT-001.
-PARAMETERS: p_m RADIOBUTTON GROUP sex,
-            p_f RADIOBUTTON GROUP sex,
-            p_t RADIOBUTTON GROUP sex.
+PARAMETERS: p_m RADIOBUTTON GROUP gen,
+            p_f RADIOBUTTON GROUP gen,
+            p_t RADIOBUTTON GROUP gen.
 SELECTION-SCREEN END OF BLOCK b1.
 
 CASE abap_true.

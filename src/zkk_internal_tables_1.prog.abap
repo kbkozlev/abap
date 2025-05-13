@@ -6,7 +6,7 @@
 REPORT zkk_internal_tables_1 NO STANDARD PAGE HEADING.
 
 SELECTION-SCREEN BEGIN OF BLOCK b1 WITH FRAME TITLE TEXT-001.
-PARAMETERS: p_roll TYPE n LENGTH 3.
+PARAMETERS: p_roll TYPE n LENGTH 3 OBLIGATORY.
 SELECTION-SCREEN END OF BLOCK b1.
 
 TYPES: BEGIN OF ty_student,
@@ -239,9 +239,10 @@ LOOP AT it_student INTO gs_student.
   ENDCASE.
 
   WRITE: / |Roll Num: { gs_student-roll }|,
-       / |Name: { gs_student-name }|,
-       / |Age: { gs_student-age }|,
-       / |Gender: { gs_student-gender }|.
+         / |Name: { gs_student-name }|,
+         / |Age: { gs_student-age }|,
+         / |Gender: { gs_student-gender }|.
+
   SKIP 1.
 
   CLEAR gs_student.

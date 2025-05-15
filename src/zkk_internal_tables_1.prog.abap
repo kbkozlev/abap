@@ -82,21 +82,16 @@ ENDLOOP.
 CLEAR gs_student.
 
 * First 5 students
-DATA: gv_count TYPE i.
-gv_count = 1.
-
 SKIP 1.
 WRITE: 'The first 5 student names are' COLOR 3.
 
 LOOP AT it_student INTO gs_student.
 
-  WRITE: / |{ gv_count }) { gs_student-name }|.
+  WRITE: / |{ sy-tabix }) { gs_student-name }|.
 
-  IF gv_count >= 5.
+  IF sy-tabix >= 5.
     EXIT.
   ENDIF.
-
-  gv_count = gv_count + 1.
 
 ENDLOOP.
 CLEAR gs_student.

@@ -175,13 +175,15 @@ LOOP AT it_student INTO gs_student.
 
     IF gv_age1 = gv_age2 AND gv_gen1 NE gv_gen2.
 
-      WRITE: / |Name: { gs_student-name }|,
+      WRITE: / |Roll: { gs_student-roll }|,
+             / |Name: { gs_student-name }|,
              / |Age: { gs_student-age }|,
              / |Gender: { gs_student-gender }|.
 
       SKIP 1.
 
-      WRITE: / |Name: { gs_student1-name }|,
+      WRITE: / |Roll: { gs_student1-roll }|,
+             / |Name: { gs_student1-name }|,
              / |Age: { gs_student1-age }|,
              / |Gender: { gs_student1-gender }|,
              / sy-uline.

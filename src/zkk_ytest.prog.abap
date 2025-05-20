@@ -27,7 +27,7 @@ SELECTION-SCREEN END OF BLOCK b1.
 TYPES: ty_str TYPE string.
 DATA: it_fstr  TYPE TABLE OF ty_str,
       gs_str   TYPE ty_str,
-      gv_final TYPE string.
+      gv_final TYPE string VALUE 'conn='.
 
 IF p_server IS NOT INITIAL.
   gs_str = |/H/{ p_server }|.
@@ -59,24 +59,24 @@ IF p_lang IS NOT INITIAL.
   CLEAR gs_str.
 ENDIF.
 
-IF p_trans CP '/n*'.
-  SHIFT p_trans BY 2 PLACES.
-  gs_str = |&tran={ p_trans }|.
-ELSE.
-  gs_str = |&tran={ p_trans }|.
+IF p_trans IS NOT INITIAL.
+  IF p_trans CP '/n*'.
+    SHIFT p_trans BY 2 PLACES.
+    gs_str = |&tran={ p_trans }|.
+  ELSE.
+    gs_str = |&tran={ p_trans }|.
 
-  APPEND gs_str TO it_fstr.
-  CLEAR gs_str.
+    APPEND gs_str TO it_fstr.
+    CLEAR gs_str.
+  ENDIF.
 ENDIF.
 
 LOOP AT it_fstr INTO gs_str.
-*  CONCATENATE gv_final gs_str INTO gv_final SEPARATED BY space.
-*  gv_final = gv_final + gs_str.
-  gv_final = |{ gv_final } { gs_str }|.
+  CONCATENATE gv_final gs_str INTO gv_final.
   CLEAR gs_str.
 ENDLOOP.
 
-WRITE gv_final.
+WRITE: |Final String: { gv_final }|.
 
 
 

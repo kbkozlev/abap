@@ -12,9 +12,51 @@
    </PROGDIR>
    <TPOOL>
     <item>
+     <ID>I</ID>
+     <KEY>001</KEY>
+     <ENTRY>SAP JAVA GUI Connection Constructor</ENTRY>
+     <LENGTH>70</LENGTH>
+    </item>
+    <item>
      <ID>R</ID>
      <ENTRY>Testing</ENTRY>
      <LENGTH>7</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>P_CLIENT</KEY>
+     <ENTRY>Client</ENTRY>
+     <LENGTH>14</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>P_INUM</KEY>
+     <ENTRY>Instance Number</ENTRY>
+     <LENGTH>23</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>P_LANG</KEY>
+     <ENTRY>Language</ENTRY>
+     <LENGTH>16</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>P_SERVER</KEY>
+     <ENTRY>Application Server</ENTRY>
+     <LENGTH>26</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>P_TRANS</KEY>
+     <ENTRY>Transaction</ENTRY>
+     <LENGTH>19</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>P_UNAME</KEY>
+     <ENTRY>Username</ENTRY>
+     <LENGTH>16</LENGTH>
     </item>
    </TPOOL>
   </asx:values>

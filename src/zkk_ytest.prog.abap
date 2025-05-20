@@ -70,7 +70,9 @@ ELSE.
 ENDIF.
 
 LOOP AT it_fstr INTO gs_str.
-  gv_final = gv_final + gs_str.
+*  CONCATENATE gv_final gs_str INTO gv_final SEPARATED BY space.
+*  gv_final = gv_final + gs_str.
+  gv_final = |{ gv_final } { gs_str }|.
   CLEAR gs_str.
 ENDLOOP.
 

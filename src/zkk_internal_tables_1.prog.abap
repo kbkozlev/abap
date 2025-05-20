@@ -168,7 +168,7 @@ LOOP AT it_student INTO gs_student.
   gv_gen1 = gs_student-gender.
 
 
-  LOOP AT it_student INTO gs_student1 FROM sy-tabix + 1.
+  LOOP AT it_student INTO gs_student1. " FROM sy-tabix + 1.
 
     gv_age2 = gs_student1-age.
     gv_gen2 = gs_student1-gender.

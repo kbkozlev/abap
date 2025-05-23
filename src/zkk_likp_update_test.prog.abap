@@ -6,7 +6,7 @@
 *&
 *&---------------------------------------------------------------------*
 
-REPORT ZKK_LIKP_UPDATE_TEST MESSAGE-ID ZMSG.
+REPORT ZKK_LIKP_UPDATE_TEST MESSAGE-ID ZMS_KK_TEST.
 .
 
 *----------------------------------------------------------------------*
@@ -26,7 +26,7 @@ DATA:  w_rcode      LIKE sy-subrc.            "internal returncode
 * SELECTION-SCREEN                                                     *
 *----------------------------------------------------------------------*
 SELECTION-SCREEN BEGIN OF BLOCK box_one WITH FRAME TITLE text-001.
-SELECT-OPTIONS s_vbeln  FOR likp-vbeln NO-EXTENSION NO INTERVALS OBLIGATORY.
+SELECT-OPTIONS s_vbeln  FOR likp-vbeln NO INTERVALS NO-EXTENSION OBLIGATORY.
 PARAMETER      p_vlstk LIKE likp-vlstk VALUE CHECK.
 SELECTION-SCREEN END OF BLOCK box_one.
 *----------------------------------------------------------------------*
@@ -47,6 +47,8 @@ START-OF-SELECTION.
 *                                                     likp-vkorg.
     MESSAGE e000 WITH 'You have no authorization for Warehouse:'(002)
                                                         likp-lgnum.
+
+
 *>>>End of change @001
   ENDIF.
 *----------------------------------------------------------------------*
